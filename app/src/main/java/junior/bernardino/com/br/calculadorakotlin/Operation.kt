@@ -16,12 +16,26 @@ class Operation {
 
         var resp = 0.0
         when (operation) {
-            "/"-> resp = operator1.div(operator2)
-            "x"-> resp = operator1.times(operator2)
-            "-"-> resp = operator1.minus(operator2)
-            "+"-> resp = operator1.plus(operator2)
+            var a
+            var b
+            "/"->{
+                resp = operator1.div(operator2)
+                return a/b
+            }
+            
+            "x"-> {
+                resp = operator1.div(operator2)
+                return a*b
+            }
+            "-"-> {
+                resp = operator1.div(operator2)
+                return a-b
+            }
+            "+"-> {
+                resp = operator1.div(operator2)
+                return a+b
+            }
         }
-
-        return resp
+   
     }
 }
